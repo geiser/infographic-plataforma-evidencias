@@ -1,0 +1,15 @@
+.GlobalEnv
+package:pivottabler
+package:shinythemes
+package:shiny
+package:plotly
+package:ggplot2
+tools:rstudio
+package:stats
+package:graphics
+package:grDevices
+package:utils
+package:datasets
+package:methods
+Autoloads
+package:base

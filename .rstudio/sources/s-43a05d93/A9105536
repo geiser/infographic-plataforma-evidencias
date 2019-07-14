@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562996947984.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A9105536",
+    "lastKnownWriteTime" : 4,
+    "last_content_update" : 1562996947984,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F45F31A8",
+        "caption" : "evidencias",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=evidencias&cache_key=F45F31A8",
+        "displayedObservations" : 10443,
+        "environment" : "",
+        "expression" : "evidencias",
+        "object" : "evidencias",
+        "preview" : 0,
+        "totalObservations" : 10443,
+        "variables" : 6
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,1157 @@
+1562856160148:install.packages(c("pivottabler", "readr"))
+1562857863296:fcriterios <- read_csv("data/criterios.csv")
+1562857863811:fevidencias <- read_csv("data/evidencias.csv")
+1562857867189:#install.packages(c('pivottabler','plotly'))
+1562857867238:library(readr)
+1562857868429:library(plotly)
+1562857870152:library(pivottabler)
+1562857870229:fcriterios <- read_csv("data/criterios.csv")
+1562857870550:fevidencias <- read_csv("data/evidencias.csv")
+1562858043421:fcriterios <- read_csv("data/criterios.csv")
+1562858043670:fevidencias <- read_csv("data/evidencias.csv")
+1562859041023:# get default parameters for SQL queries
+1562859041042:default.csv.params <- function(loading.df.keys = c()) {
+1562859041056:to_return <- list(
+1562859041073:criteria = list(src = 'data/criterios', name = 'User', id = 'UserId'),
+1562859041084:evidences = list(src = 'data/evidencias', prefix = 'uc', name = 'Classroom', id = 'ClassroomId', table = 'classroom'),
+1562859041100:)
+1562859041114:for (key in loading.df.keys) {
+1562859041129:to_return[[key]][['df']] <- read_csv(to_return[[key]][['src']])
+1562859041144:}
+1562859041159:return(to_return)
+1562859041174:}
+1562859231800:colnames(fcriterios)
+1562859452875:colnames(fevidencias)
+1562859482239:fevidencias
+1562859533016:colnames(fevidencias)
+1562859613106:to_return <- list(
+1562859613123:criteria = list(src = 'data/criterios.csv', name=c('User'), id='Cód. Critério'),
+1562859613134:evidence = list(src = 'data/evidencias.csv', id='Evidência', id='Cód. Evidência'),
+1562859613148:)
+1562859622208:to_return <- list(
+1562859622225:criteria = list(src = 'data/criterios.csv', name=c('User'), id='Cód. Critério'),
+1562859622243:, evidence = list(src = 'data/evidencias.csv', id='Evidência', id='Cód. Evidência')
+1562859622255:)
+1562859632065:to_return <- list(
+1562859632085:criteria = list(src = 'data/criterios.csv', name=c('User'), id='Cód. Critério'),
+1562859632102:, evidence = list(src = 'data/evidencias.csv', id='Evidência', id='Cód. Evidência')
+1562859632114:)
+1562859651903:colnames(fcriterios)
+1562859714217:to_return <- list(
+1562859714236:criteria = list(src = 'data/criterios.csv'
+1562859714253:, name = c('Cód. Item Edital','Critério')
+1562859714271:, id = 'Cód. Critério')
+1562859714288:, evidence = list(src = 'data/evidencias.csv'
+1562859714301:, name ='Evidência'
+1562859714321:, id='Cód. Evidência')
+1562859714338:)
+1562859772020:if (to_return$criteria$src)
+1562859779053:else
+1562859785894:(to_return$criteria$src)
+1562859812949:is.null(to_return[['dddd']]$src)
+1562859816449:is.null(to_return[['dddd']]$src)
+1562860202889:# get default parameters for SQL queries
+1562860202911:default.csv.params <- function(loading.df.keys = c()) {
+1562860202926:to_return <- list(
+1562860202942:criteria = list(src = 'data/criterios.csv'
+1562860202957:, name = c('Cód. Item Edital','Critério')
+1562860202969:, id = 'Cód. Critério')
+1562860202986:, evidence = list(src = 'data/evidencias.csv'
+1562860203003:, name ='Evidência'
+1562860203019:, id='Cód. Evidência')
+1562860203031:)
+1562860203047:for (key in loading.df.keys) {
+1562860203063:if (!is.null(to_return[[key]][['src']])) {
+1562860203078:to_return[[key]][['df']] <- read_csv(to_return[[key]][['src']])
+1562860203091:}
+1562860203107:}
+1562860203123:return(to_return)
+1562860203140:}
+1562860219762:csv.params = default.csv.params(key)
+1562860235344:csv.params = default.csv.params('criteria')
+1562860514892:to_return <- list(
+1562860514924:criteria = list(src = 'data/criterios.csv'
+1562860514942:, name = c('Cód. Item Edital','Critério'), id = 'Cód. Critério')
+1562860514961:, evidence = list(src = 'data/evidencias.csv'
+1562860514980:, name ='Evidência', id='Cód. Evidência')
+1562860514998:)
+1562860520794:df <- read_csv(to_return[[key]][['src']])
+1562860533241:df <- read_csv(to_return[['criteria']][['src']])
+1562860535337:df
+1562860591082:df$Dimensão
+1562860609858:df$Dimensão
+1562860750119:df <- read_csv(to_return[['criteria']][['src']])
+1562860931979:lapply(to_return$criteria$name, FUN = function(x) { df[[x]] })
+1562860984877:do.call(paste0, lapply(to_return$criteria$name, FUN = function(x) { df[[x]] }))
+1562861015658:View(do.call(paste0, lapply(to_return$criteria$name, FUN = function(x) { df[[x]] })))
+1562861045081:?do.call
+1562861364123:View(do.call(paste0, lapply(to_return$criteria$name, FUN = function(x) { v <- df[[x]]; v[is.na(v)]<-'' ; return(v) })))
+1562861768081:columns
+1562861839214:# get default parameters for SQL queries
+1562861839228:concat.columns <- function(df, columns) {
+1562861839246:return(do.call(
+1562861839266:paste0
+1562861839279:, lapply(columns , FUN = function(x) {
+1562861839300:v <- df[[x]]; v[is.na(v)] <-''; return(v)
+1562861839321:})))
+1562861839343:}
+1562861844468:df <- read_csv(to_return[[key]][['src']])
+1562861852357:key='criteria'
+1562861856718:to_return <- list(
+1562861856737:criteria = list(src = 'data/criterios.csv'
+1562861856754:, name = c('Cód. Item Edital','Critério'), id = 'Cód. Critério')
+1562861856770:, evidence = list(src = 'data/evidencias.csv'
+1562861856785:, name ='Evidência', id='Cód. Evidência')
+1562861856800:)
+1562861858404:df <- read_csv(to_return[[key]][['src']])
+1562861860760:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562861862987:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562861869918:View(df)
+1562861921817:fcriterios <- read_csv("data/criterios.csv")
+1562861922134:fevidencias <- read_csv("data/evidencias.csv")
+1562861922929:# get default parameters for SQL queries
+1562861922942:concat.columns <- function(df, columns) {
+1562861922962:return(do.call(
+1562861922973:paste0
+1562861922991:, lapply(columns , FUN = function(x) {
+1562861923007:v <- df[[x]]; v[is.na(v)] <-''; return(v)
+1562861923019:})))
+1562861923037:}
+1562861927372:to_return <- list(
+1562861927394:criteria = list(src = 'data/criterios.csv'
+1562861927418:, name = c('Cód. Item Edital','Critério'), id = 'Cód. Critério')
+1562861927438:, evidence = list(src = 'data/evidencias.csv'
+1562861927459:, name ='Evidência', id='Cód. Evidência')
+1562861927479:)
+1562861941542:to_return <- list(
+1562861941562:criteria = list(src = 'data/criterios.csv'
+1562861941576:, name = c('Cód. Item Edital','Critério'), id = 'Cód. Critério')
+1562861941588:, evidence = list(src = 'data/evidencias.csv'
+1562861941603:, name ='Evidência', id='Cód. Evidência')
+1562861941619:)
+1562861942232:for (key in names(to_return)) {
+1562861942248:if (!is.null(to_return[[key]][['src']])) {
+1562861942269:df <- read_csv(to_return[[key]][['src']])
+1562861942287:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562861942299:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562861942315:to_return[[key]][['df']] <- df
+1562861942327:}
+1562861942343:}
+1562861951628:to_return$evidence
+1562861961722:View(to_return$evidence$df)
+1562861994085:default.csv.params <- function() {
+1562861994106:to_return <- list(
+1562861994126:criteria = list(src = 'data/criterios.csv'
+1562861994143:, name = c('Cód. Item Edital','Critério'), id = 'Cód. Critério')
+1562861994161:, evidence = list(src = 'data/evidencias.csv'
+1562861994180:, name ='Evidência', id='Cód. Evidência')
+1562861994199:)
+1562861994219:for (key in names(to_return)) {
+1562861994253:if (!is.null(to_return[[key]][['src']])) {
+1562861994274:df <- read_csv(to_return[[key]][['src']])
+1562861994298:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562861994323:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562861994346:to_return[[key]][['df']] <- df
+1562861994367:}
+1562861994401:}
+1562861994427:return(to_return)
+1562861994454:}
+1562862029013:csv.params$criteria$df
+1562862272483:View(fcriterios)
+1562862429484:fcriterios <- read_csv("data/criterios.csv")
+1562862429777:fevidencias <- read_csv("data/evidencias.csv")
+1562862431541:df <- read_csv('data/assessment.csv')
+1562862436443:filter <- list(
+1562862436463:ciclo=c(1)
+1562862436476:, dimensao=c("Educacional")
+1562862436492:, tipo=c("Digital")
+1562862436504:)
+1562863018081:View(fevidencias)
+1562863285738:?unique
+1562863304778:?unique
+1562863334494:colnames(fevidencias)
+1562863408758:to_return <- list(
+1562863408774:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562863408793:, criteria = list(src = 'data/criterios.csv'
+1562863408803:, name = c('Cód. Item Edital','Critério'), id = 'Cód. Critério')
+1562863408817:, evidence = list(src = 'data/evidencias.csv'
+1562863408831:, name ='Evidência', id='Cód. Evidência')
+1562863408844:)
+1562863422334:key = 'period'
+1562863433457:if (!is.null(to_return[[key]][['src']])) {
+1562863433482:df <- read_csv(to_return[[key]][['src']])
+1562863433494:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562863433510:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562863433523:to_return[[key]][['df']] <- df
+1562863433539:}
+1562863445328:to_return$period$df
+1562863464048:df <- read_csv(to_return[[key]][['src']])
+1562863471844:to_return[[key]]$id
+1562863474897:to_return[[key]]$name
+1562863477197:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562863478171:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562863480976:df
+1562863556193:default.csv.params <- function() {
+1562863556208:to_return <- list(
+1562863556226:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562863556250:, criteria = list(src = 'data/criterios.csv'
+1562863556266:, name = c('Cód. Item Edital','Critério'), id = 'Cód. Critério')
+1562863556282:, evidence = list(src = 'data/evidencias.csv'
+1562863556295:, name ='Evidência', id='Cód. Evidência')
+1562863556311:)
+1562863556325:for (key in names(to_return)) {
+1562863556340:if (!is.null(to_return[[key]][['src']])) {
+1562863556355:df <- read_csv(to_return[[key]][['src']])
+1562863556371:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562863556384:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562863556400:to_return[[key]][['df']] <- df
+1562863556416:}
+1562863556433:}
+1562863556445:return(to_return)
+1562863556465:}
+1562863572797:df <- csv.params[[key]]df
+1562863576793:key
+1562863582879:csv.params = default.csv.params()
+1562863584448:df <- csv.params[[key]]df
+1562863589018:df <- csv.params[[key]]$df
+1562863596714:to_return <- as.list(df$id)
+1562863597472:names(to_return) <- df$name
+1562863605961:unique(to_return)
+1562863616843:to_return <- as.list(df$id)
+1562863618970:names(to_return) <- df$name
+1562863626564:to_return
+1562863631705:to_return$`Ciclo 1`
+1562863640212:to_return
+1562863647972:to_return$`Ciclo 1`
+1562863677412:unique(to_return)
+1562863712580:df <- csv.params[[key]]$df
+1562863733463:df <- csv.params[[key]]$df[,c('id','name')]
+1562863737446:View(df)
+1562863776887:df <- csv.params[[key]]$df[,c('id','name')]
+1562863782955:unique(df)
+1562865102461:fevidencias
+1562865106620:View(fevidencias)
+1562868543100:fassessment <- read_csv('data/assessment.csv')
+1562868562499:fassessment$`Avaliação da Evidência`
+1562868604037:unique(fassessment$`Avaliação da Evidência`)
+1562869118283:colnames(fassessment)
+1562869144710:View(fassessment)
+1562869895109:View(fassessment)
+1562870127203:colnames(fcriterios)
+1562870527843:?filters
+1562870971801:default.csv.params <- function() {
+1562870971826:to_return <- list(
+1562870971846:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562870971864:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562870971891:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562870971911:, criteria = list(src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério'))
+1562870971946:, evidence = list(src='data/evidencias.csv', id='Cód. Evidência', name='Evidência')
+1562870971968:)
+1562870971989:for (key in names(to_return)) {
+1562870972011:if (!is.null(to_return[[key]][['src']])) {
+1562870972033:df <- read_csv(to_return[[key]][['src']])
+1562870972054:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562870972076:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562870972099:to_return[[key]][['df']] <- df
+1562870972123:}
+1562870972146:}
+1562870972168:return(to_return)
+1562870972190:}
+1562870978674:csv.params = default.csv.params()
+1562871503592:ccsv.params
+1562871533506:csv.params$criteria$df
+1562871545006:colnames(csv.params$criteria$df)
+1562871588665:df <-  csv.params[[key]]$df
+1562871625709:key
+1562871651239:key='dimensão'
+1562871656873:df <-  csv.params[[key]]$df
+1562871670869:colnames(df)
+1562871675003:df <-  csv.params[[key]]$df
+1562871685827:key='dimension'
+1562871689332:df <-  csv.params[[key]]$df
+1562871830335:is.na(df$id)
+1562871833561:!is.na(df$id)
+1562871951325:c(T,F,T) & c(F,F,T)
+1562871954855:c(T,F,T) & c(F,T,T)
+1562871959034:c(T,F,T) & c(F,T,F)
+1562872566218:df[idx]
+1562872571175:df <-  csv.params[[key]]$df
+1562872571815:idx <- !is.na(df$id)
+1562872574928:df[idx]
+1562872582273:df[idx,]
+1562872664485:csv.params$dimension
+1562872699654:csv.params$criteria
+1562872881568:csv.params[[key]]
+1562872886934:key
+1562872970420:csv.params[[key]]
+1562872977073:csv.params[[key]]
+1562873409067:?filter
+1562873578411:T & F
+1562873580573:T & T
+1562873827385:filters[[nfilter]]
+1562876120092:names(fcriterios)
+1562876285736:default.csv.params <- function() {
+1562876285749:to_return <- list(
+1562876285761:dictionary = dictionary
+1562876285773:, period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562876285784:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562876285800:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562876285811:, criteria = list(
+1562876285821:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562876285833:, fields=list(dimension='Dimension',criteria='Critério'))
+1562876285851:, evidence = list(src='data/evidencias.csv', id='Cód. Evidência', name='Evidência')
+1562876285861:)
+1562876285874:for (key in names(to_return)) {
+1562876285884:if (!is.null(to_return[[key]][['src']])) {
+1562876285896:df <- read_csv(to_return[[key]][['src']])
+1562876285905:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562876285916:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562876285926:to_return[[key]][['df']] <- df
+1562876285938:}
+1562876285950:}
+1562876285959:return(to_return)
+1562876285973:}
+1562876293164:csv.params = default.csv.params()
+1562876310698:default.csv.params <- function() {
+1562876310720:to_return <- list(
+1562876310738:dictionary = dictionary
+1562876310758:, period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562876310774:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562876310797:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562876310812:, criteria = list(
+1562876310824:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562876310840:, fields=list(dimension='Dimension',criteria='Critério'))
+1562876310859:, evidence = list(src='data/evidencias.csv', id='Cód. Evidência', name='Evidência')
+1562876310875:)
+1562876310893:for (key in names(to_return)) {
+1562876310909:if (!is.null(to_return[[key]][['src']])) {
+1562876310923:df <- read_csv(to_return[[key]][['src']])
+1562876310938:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562876310953:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562876310966:to_return[[key]][['df']] <- df
+1562876310982:}
+1562876310993:}
+1562876311010:return(to_return)
+1562876311023:}
+1562876323386:default.csv.params <- function() {
+1562876323406:to_return <- list(
+1562876323429:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562876323447:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562876323481:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562876323494:, criteria = list(
+1562876323513:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562876323525:, fields=list(dimension='Dimension',criteria='Critério'))
+1562876323550:, evidence = list(src='data/evidencias.csv', id='Cód. Evidência', name='Evidência')
+1562876323565:)
+1562876323582:for (key in names(to_return)) {
+1562876323594:if (!is.null(to_return[[key]][['src']])) {
+1562876323611:df <- read_csv(to_return[[key]][['src']])
+1562876323626:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562876323642:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562876323654:to_return[[key]][['df']] <- df
+1562876323670:}
+1562876323685:}
+1562876323700:return(to_return)
+1562876323716:}
+1562876329882:csv.params = default.csv.params()
+1562876366129:?in
+1562876518027:all(c(2,3) %in% c(2,3,4,5,6))
+1562876525064:(c(2,3) %in% c(2,3,4,5,6))
+1562876609942:default.csv.params <- function() {
+1562876609960:to_return <- list(
+1562876609973:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562876609984:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562876610001:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562876610012:, criteria = list(
+1562876610022:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562876610033:, fields=list(dimension='Dimension',criteria='Critério'))
+1562876610049:, evidence = list(src='data/evidencias.csv', id='Cód. Evidência', name='Evidência')
+1562876610060:)
+1562876610072:for (key in names(to_return)) {
+1562876610081:if (!is.null(to_return[[key]][['src']])) {
+1562876610093:df <- read_csv(to_return[[key]][['src']])
+1562876610103:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562876610117:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562876610129:to_return[[key]][['df']] <- df
+1562876610144:}
+1562876610155:}
+1562876610171:return(to_return)
+1562876610185:}
+1562876616461:csv.params = default.csv.params()
+1562876640718:key
+1562876651502:key ='criteria'
+1562876755542:csv.params[[key]]
+1562876763783:csv.params[[key]]$fields
+1562876785144:names(csv.params[[key]]$fields))
+1562876787551:names(csv.params[[key]]$fields)
+1562876921506:csv.params[[key]]
+1562876953022:nfield
+1562876966396:nfield='dimension'
+1562876974581:df <-  csv.params[[key]]$df
+1562876975801:idx <- !is.na(df$id)
+1562876983998:df[[csv.params[[key]]$fields[[nfield]]]]
+1562876989995:nfield
+1562876998302:csv.params[[key]]$fields[[nfield]]
+1562877024756:colnames(fcriterios)
+1562877052335:df <-  csv.params[[key]]$df
+1562877052783:idx <- !is.na(df$id)
+1562877062759:df[[csv.params[[key]]$fields[[nfield]]]]
+1562877069034:nfield
+1562877078034:fields[[nfield]]
+1562877088787:csv.params[[key]]$fields[[nfield]]
+1562877092748:default.csv.params <- function() {
+1562877092765:to_return <- list(
+1562877092781:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562877092790:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562877092806:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562877092817:, criteria = list(
+1562877092827:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562877092838:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562877092852:, evidence = list(src='data/evidencias.csv', id='Cód. Evidência', name='Evidência')
+1562877092862:)
+1562877092872:for (key in names(to_return)) {
+1562877092882:if (!is.null(to_return[[key]][['src']])) {
+1562877092891:df <- read_csv(to_return[[key]][['src']])
+1562877092902:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562877092911:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562877092923:to_return[[key]][['df']] <- df
+1562877092932:}
+1562877092943:}
+1562877092952:return(to_return)
+1562877092963:}
+1562877098468:csv.params = default.csv.params()
+1562877099916:df <-  csv.params[[key]]$df
+1562877100411:idx <- !is.na(df$id)
+1562877111101:csv.params[[key]]$fields[[nfield]]
+1562877117093:df[[csv.params[[key]]$fields[[nfield]]]]
+1562877310623:df <-  csv.params[[key]]$df
+1562877311000:idx <- !is.na(df$id)
+1562877312343:for (nfilter in names(filters)) {
+1562877312356:if (all(c(nfilter) %in% names(csv.params[[key]]$fields))) {
+1562877312369:idx <- idx & (df[[csv.params[[key]]$fields[[nfield]]]] %in% filters[[nfilter]])
+1562877312379:}
+1562877312391:}
+1562877841067:colnames(fevidencias)
+1562877877070:fevidencias
+1562877917063:colnames(fevidencias)
+1562878303175:library(readr)
+1562878303199:assessment <- read_csv("data/assessment.csv")
+1562878303436:View(assessment)
+1562878360495:colnames(fevidencias)
+1562878681729:fevidencias[['Cód. Ciclo']]
+1562878687672:unique(fevidencias[['Cód. Ciclo']])
+1562878780276:View(assessment)
+1562878820130:default.csv.params <- function() {
+1562878820143:to_return <- list(
+1562878820166:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562878820182:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562878820204:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562878820219:, criteria = list(
+1562878820242:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562878820254:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562878820273:, technologyType = list(
+1562878820287:src='data/evidencias.csv', id='Cód. Evidência', name="Tipo de Tecnologia"
+1562878820299:, fields=list(period='Cód. Ciclo'))
+1562878820312:, evidence = list(
+1562878820323:src='data/evidencias.csv', id='Cód. Evidência', name='Evidência'
+1562878820339:, fields=list(period='Cód. Ciclo', technologyType='Tipo de Tecnologia'))
+1562878820350:)
+1562878820364:for (key in names(to_return)) {
+1562878820379:if (!is.null(to_return[[key]][['src']])) {
+1562878820391:df <- read_csv(to_return[[key]][['src']])
+1562878820405:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562878820419:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562878820431:to_return[[key]][['df']] <- df
+1562878820445:}
+1562878820460:}
+1562878820471:return(to_return)
+1562878820486:}
+1562878961339:shiny::runApp()
+1562879132956:key='technologyType'
+1562879140484:default.csv.params <- function() {
+1562879140506:to_return <- list(
+1562879140529:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562879140546:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562879140568:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562879140586:, criteria = list(
+1562879140601:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562879140613:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562879140636:, technologyType = list(
+1562879140649:src='data/evidencias.csv', id='Cód. Evidência', name="Tipo de Tecnologia"
+1562879140662:, fields=list(period='Cód. Ciclo'))
+1562879140677:, evidence = list(
+1562879140691:src='data/evidencias.csv', id='Cód. Evidência', name='Evidência'
+1562879140703:, fields=list(period='Cód. Ciclo', technologyType='Tipo de Tecnologia'))
+1562879140719:)
+1562879140736:for (key in names(to_return)) {
+1562879140751:if (!is.null(to_return[[key]][['src']])) {
+1562879140763:df <- read_csv(to_return[[key]][['src']])
+1562879140780:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562879140794:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562879140808:to_return[[key]][['df']] <- df
+1562879140822:}
+1562879140837:}
+1562879140853:return(to_return)
+1562879140868:}
+1562879147223:csv.params = default.csv.params()
+1562879150009:df <-  csv.params[[key]]$df
+1562879153462:View(df)
+1562879181865:default.csv.params <- function() {
+1562879181884:to_return <- list(
+1562879181899:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562879181913:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562879181935:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562879181946:, criteria = list(
+1562879181961:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562879181975:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562879181998:, technologyType = list(
+1562879182011:src='data/evidencias.csv', id='Cód. Evidência', name="Tipo de Tecnologia"
+1562879182025:, fields=list(period='Cód. Ciclo'))
+1562879182037:, evidence = list(
+1562879182052:src='data/evidencias.csv', id='Cód. Evidência', name='Evidência'
+1562879182066:, fields=list(period='Cód. Ciclo', technologyType='Tipo de Tecnologia'))
+1562879182079:)
+1562879182094:for (key in names(to_return)) {
+1562879182112:if (!is.null(to_return[[key]][['src']])) {
+1562879182124:df <- read_csv(to_return[[key]][['src']])
+1562879182136:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562879182151:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562879182166:to_return[[key]][['df']] <- df
+1562879182181:}
+1562879182199:}
+1562879182216:return(to_return)
+1562879182234:}
+1562879187740:csv.params = default.csv.params()
+1562879191478:df <-  csv.params[[key]]$df
+1562879221461:idx <- !is.na(df$id)
+1562879223801:df <- df[idx,]
+1562879228804:df[,c('id','name')]
+1562879296551:unique(fcriterios$Dimensão)
+1562879330578:runApp()
+1562879388450:colnames(fevidencias)
+1562879428632:runApp()
+1562879641105:?verticalLayout
+1562879870722:runApp()
+1562879938749:runApp()
+1562879956440:?flowLayout
+1562879977764:runApp()
+1562879999467:runApp()
+1562880058216:runApp()
+1562880086353:?radioButtons
+1562880111502:runApp()
+1562880132937:runApp()
+1562880159237:runApp()
+1562880184073:runApp()
+1562880519112:runApp()
+1562880707565:runApp()
+1562880977835:runApp()
+1562881144449:runApp()
+1562881279026:runApp()
+1562881411843:get_choices("evidence", list(technologyType=input$technologyType))
+1562881459678:key = 'evidence'
+1562881479944:filters = list()
+1562881486599:default.csv.params <- function() {
+1562881486618:to_return <- list(
+1562881486631:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562881486650:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562881486677:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562881486696:, criteria = list(
+1562881486714:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562881486735:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562881486762:, technologyType = list(
+1562881486781:src='data/evidencias.csv', id='Tipo de Tecnologia', name="Tipo de Tecnologia"
+1562881486802:, fields=list(period='Cód. Ciclo'))
+1562881486820:, evidence = list(
+1562881486838:src='data/evidencias.csv', id='Cód. Evidência', name='Evidência'
+1562881486852:, fields=list(period='Cód. Ciclo', technologyType='Tipo de Tecnologia'))
+1562881486872:)
+1562881486894:for (key in names(to_return)) {
+1562881486915:if (!is.null(to_return[[key]][['src']])) {
+1562881486938:df <- read_csv(to_return[[key]][['src']])
+1562881486958:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562881486981:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562881487002:to_return[[key]][['df']] <- df
+1562881487023:}
+1562881487044:}
+1562881487065:return(to_return)
+1562881487086:}
+1562881495417:csv.params = default.csv.params()
+1562881498564:df <-  csv.params[[key]]$df
+1562881502762:idx <- !is.na(df$id)
+1562881506087:for (nfilter in names(filters)) {
+1562881506109:if (length(filters[[nfilter]]) > 0) {
+1562881506125:if (all(c(nfilter) %in% names(csv.params[[key]]$fields))) {
+1562881506137:idx <- idx & (df[[csv.params[[key]]$fields[[nfield]]]] %in% filters[[nfilter]])
+1562881506161:}
+1562881506178:}
+1562881506193:}
+1562881508837:df <- df[idx,]
+1562881515713:filters
+1562881578343:filters = list(technologyType=c())
+1562881636051:filters = list(technologyType=unique(csv.params$technologyType$df$`Tipo de Tecnologia`))
+1562881638186:filters
+1562881652524:for (nfilter in names(filters)) {
+1562881652541:if (length(filters[[nfilter]]) > 0) {
+1562881652558:if (all(c(nfilter) %in% names(csv.params[[key]]$fields))) {
+1562881652571:idx <- idx & (df[[csv.params[[key]]$fields[[nfield]]]] %in% filters[[nfilter]])
+1562881652585:}
+1562881652598:}
+1562881652612:}
+1562881663394:key
+1562881722167:names(filters)
+1562881741501:nfilter="techonologyType"
+1562881746013:nfilter="technologyType"
+1562881756069:length(filters[[nfilter]])
+1562881765855:(all(c(nfilter) %in% names(csv.params[[key]]$fields)))
+1562881775192:names(csv.params[[key]]$fields)
+1562881793665:filters[[nfilter]]
+1562881805239:csv.params[[key]]$fields[[nfield]]
+1562881809666:csv.params[[key]]
+1562881812526:csv.params[[key]]$fields
+1562881826160:csv.params[[key]]$fields[[nfield]]
+1562881841482:csv.params[[key]]$fields
+1562881854797:nfield
+1562881863968:nfilter
+1562881874146:names(filters)
+1562881907662:df[[csv.params[[key]]$fields[[nfilter]]]]
+1562881924520:runApp()
+1562882056199:runApp()
+1562882189239:runApp()
+1562882354770:aaaa <-list(a="dff", sdf="dff")
+1562882374003:names(aaaa)
+1562882384945:aaaa
+1562882395274:as.array(aaaa)
+1562882542351:unlist(aaaa)
+1562882573567:as.vector(unlist(aaaa))
+1562882614011:runApp()
+1562882877712:runApp()
+1562883716102:runApp()
+1562885014377:df <- read.csv('data/assessment.csv')
+1562885017521:View(df)
+1562885156900:colnames(assessment)
+1562885161342:colnames(df)
+1562885181493:View(df)
+1562885397542:fields
+1562885496979:df <- read_csv('data/assessment.csv')
+1562885504568:colnames(df)
+1562885977478:unique(df$`Avaliação consolidadora?`)
+1562886061860:unique(df$`Avaliação da Evidência`)
+1562886574959:df <- read_csv('data/assessment.csv')
+1562886575778:fields <- list(
+1562886575795:criteria='Cód. Critério', evidence='Cód. Evidência', appraiser='Avaliação consolidadora?'
+1562886575809:, assessmentValue='Avaliação da Evidência', technologyType='Tipo de Tecnologia'
+1562886575828:, period='Cód. Ciclo', dimension='Dimensão'
+1562886575843:)
+1562886582050:idx <- rep(T, nrow(df))
+1562886621274:runApp()
+1562887441511:##
+1562887441533:vdata <- PivotTable$new()
+1562887522643:library(pivottabler)
+1562887523026:df <- read_csv('data/assessment.csv')
+1562887524825:fields <- list(
+1562887524847:criteria='Cód. Critério', evidence='Cód. Evidência', appraiser='Avaliação consolidadora?'
+1562887524864:, assessmentValue='Avaliação da Evidência', technologyType='Tipo de Tecnologia'
+1562887524880:, period='Cód. Ciclo', dimension='Dimensão'
+1562887524895:)
+1562887601633:unique(df$`Tipo de Tecnologia`)
+1562887651022:unique(df$Dimensão)
+1562887777059:filters = list(technologyType='Digital', dimension=c('Educacional','Acessibilidade'))
+1562887781965:df <- read_csv('data/assessment.csv')
+1562887782670:fields <- list(
+1562887782694:criteria='Cód. Critério', evidence='Cód. Evidência', appraiser='Avaliação consolidadora?'
+1562887782712:, assessmentValue='Avaliação da Evidência', technologyType='Tipo de Tecnologia'
+1562887782731:, period='Cód. Ciclo', dimension='Dimensão'
+1562887782745:)
+1562887786024:## Apply filters
+1562887786050:idx <- rep(T, nrow(df))
+1562887787211:for (nfilter in names(filters)) {
+1562887787231:if (length(filters[[nfilter]]) > 0) {
+1562887787256:if (all(c(nfilter) %in% names(fields))) {
+1562887787284:idx <- idx & (df[[fields[[nfilter]]]] %in% filters[[nfilter]])
+1562887787302:}
+1562887787318:}
+1562887787331:}
+1562887788944:df <- df[idx,]
+1562887810060:library(pivottabler)
+1562887811626:df <- read_csv('data/assessment.csv')
+1562887815659:fields <- list(
+1562887815673:criteria='Cód. Critério', evidence='Cód. Evidência', appraiser='Avaliação consolidadora?'
+1562887815696:, assessmentValue='Avaliação da Evidência', technologyType='Tipo de Tecnologia'
+1562887815715:, period='Cód. Ciclo', dimension='Dimensão'
+1562887815731:)
+1562887827432:filters = list(technologyType='Digital', dimension=c('Acessibilidade'))
+1562887830097:## Apply filters
+1562887830117:idx <- rep(T, nrow(df))
+1562887830701:for (nfilter in names(filters)) {
+1562887830722:if (length(filters[[nfilter]]) > 0) {
+1562887830741:if (all(c(nfilter) %in% names(fields))) {
+1562887830756:idx <- idx & (df[[fields[[nfilter]]]] %in% filters[[nfilter]])
+1562887830768:}
+1562887830784:}
+1562887830799:}
+1562887843749:filters
+1562887873930:unique(df$`Tipo de Tecnologia`)
+1562887883619:filters = list(technologyType='Física', dimension=c('Acessibilidade'))
+1562887888079:library(pivottabler)
+1562887889761:df <- read_csv('data/assessment.csv')
+1562887894660:df <- read_csv('data/assessment.csv')
+1562887900528:fields <- list(
+1562887900556:criteria='Cód. Critério', evidence='Cód. Evidência', appraiser='Avaliação consolidadora?'
+1562887900576:, assessmentValue='Avaliação da Evidência', technologyType='Tipo de Tecnologia'
+1562887900595:, period='Cód. Ciclo', dimension='Dimensão'
+1562887900614:)
+1562887902809:## Apply filters
+1562887902830:idx <- rep(T, nrow(df))
+1562887903875:for (nfilter in names(filters)) {
+1562887903890:if (length(filters[[nfilter]]) > 0) {
+1562887903915:if (all(c(nfilter) %in% names(fields))) {
+1562887903931:idx <- idx & (df[[fields[[nfilter]]]] %in% filters[[nfilter]])
+1562887903950:}
+1562887903967:}
+1562887903982:}
+1562887915527:filters
+1562887934690:names(filters)
+1562887938895:df <- read_csv('data/assessment.csv')
+1562887939476:fields <- list(
+1562887939497:criteria='Cód. Critério', evidence='Cód. Evidência', appraiser='Avaliação consolidadora?'
+1562887939514:, assessmentValue='Avaliação da Evidência', technologyType='Tipo de Tecnologia'
+1562887939531:, period='Cód. Ciclo', dimension='Dimensão'
+1562887939543:)
+1562887941714:## Apply filters
+1562887941742:idx <- rep(T, nrow(df))
+1562887946022:for (nfilter in names(filters)) {
+1562887946040:if (length(filters[[nfilter]]) > 0) {
+1562887946058:if (all(c(nfilter) %in% names(fields))) {
+1562887946073:idx <- idx & (df[[fields[[nfilter]]]] %in% filters[[nfilter]])
+1562887946088:}
+1562887946103:}
+1562887946117:}
+1562887950154:df <- df[idx,]
+1562887971248:##
+1562887971263:vdata <- PivotTable$new()
+1562887972537:vdata$addData(df)
+1562888180092:fields[["assessmentValue"]]
+1562888349889:##
+1562888349904:vdata <- PivotTable$new()
+1562888350466:vdata$addData(df)
+1562888350938:vdata$addColumnDataGroups(fields[['assessmentValue']])
+1562888351378:vdata$addRowDataGroups(fifields[['criteria']])
+1562888352300:vdata$defineCalculation(calculationName = "Total", summariseExpression="n()")
+1562888360493:##
+1562888360512:vdata <- PivotTable$new()
+1562888360730:vdata$addData(df)
+1562888361323:vdata$addColumnDataGroups(fields[['assessmentValue']])
+1562888361745:vdata$addRowDataGroups(fields[['criteria']])
+1562888364358:vdata$defineCalculation(calculationName = "Total", summariseExpression="n()")
+1562888367305:vdata$evaluatePivot()
+1562888409548:vdata$renderPivot()
+1562888509230:vdata$asDataFrame()
+1562888562553:pdata <- vdata$asDataFrame()
+1562888565041:pdata[['id']] <- rownames(pdata)
+1562888655444:runApp()
+1562888928777:runApp()
+1562893867808:csv.params = default.csv.params()
+1562894091770:csv.params$criteria$df
+1562894137523:csv.params$criteria$df[,c('id','name')]
+1562894156626:rdata
+1562894160654:pdata <- vdata$asDataFrame()
+1562894161381:pdata[['id']] <- rownames(pdata)
+1562894162749:for (value in assessmentValues) {
+1562894162768:pdata[[paste0('Pct. ',value)]] <- round(pdata[[value]]/pdata$Total,3)
+1562894162780:}
+1562894164525:rdata <- pdata[(1:nrow(pdata)-1),]
+1562894167241:rdata
+1562894197254:pdata <- vdata$asDataFrame()
+1562894197488:pdata[['id']] <- rownames(pdata)
+1562894197677:for (value in assessmentValues) {
+1562894197701:pdata[[paste0('Pct. ',value)]] <- round(pdata[[value]]/pdata$Total,3)
+1562894197718:}
+1562894197871:rdata <- pdata[(1:nrow(pdata)-1),]
+1562894198872:rdata <- merge(
+1562894198890:rdata
+1562894198916:, csv.params$criteria$df[,c('id','name')]
+1562894198934:, by.x='id', by.y='id')
+1562894203411:View(rdata)
+1562894262773:View(rdata)
+1562894397590:?do.call
+1562894421205:paste0()
+1562894428490:?paste0
+1562894480002:?do.call
+1562894540053:# concat columns from a df
+1562894540081:concat.columns <- function(df, columns) {
+1562894540097:return(do.call(
+1562894540108:paste0
+1562894540124:, lapply(columns , FUN = function(x) {
+1562894540138:v <- df[[x]]; v[is.na(v)] <-''; return(paste0(v,'.'))
+1562894540152:})))
+1562894540164:}
+1562894541736:# parameters to get data from CSVs
+1562894541747:default.csv.params <- function() {
+1562894541761:to_return <- list(
+1562894541782:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562894541797:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562894541813:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562894541825:, criteria = list(
+1562894541833:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562894541845:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562894541859:, technologyType = list(
+1562894541871:src='data/evidencias.csv', id='Tipo de Tecnologia', name="Tipo de Tecnologia"
+1562894541889:, fields=list(period='Cód. Ciclo'))
+1562894541901:, evidence = list(
+1562894541917:src='data/evidencias.csv', id='Cód. Evidência', name='Evidência'
+1562894541932:, fields=list(period='Cód. Ciclo', technologyType='Tipo de Tecnologia'))
+1562894541946:)
+1562894541958:for (key in names(to_return)) {
+1562894541973:if (!is.null(to_return[[key]][['src']])) {
+1562894541988:df <- read_csv(to_return[[key]][['src']])
+1562894542001:df[['id']] <- concat.columns(df, to_return[[key]]$id)
+1562894542015:df[['name']] <- concat.columns(df, to_return[[key]]$name)
+1562894542029:to_return[[key]][['df']] <- df
+1562894542043:}
+1562894542056:}
+1562894542073:return(to_return)
+1562894542087:}
+1562894548792:csv.params = default.csv.params()
+1562894558010:##
+1562894558030:vdata <- PivotTable$new()
+1562894558241:vdata$addData(df)
+1562894558421:vdata$addColumnDataGroups(fields$assessmentValue)
+1562894558602:vdata$addRowDataGroups(fields$criteria)
+1562894558982:vdata$defineCalculation(calculationName = "Total", summariseExpression="n()")
+1562894559010:vdata$evaluatePivot()
+1562894564744:pdata <- vdata$asDataFrame()
+1562894564932:pdata[['id']] <- rownames(pdata)
+1562894564954:for (value in assessmentValues) {
+1562894564958:pdata[[paste0('Pct. ',value)]] <- round(pdata[[value]]/pdata$Total,3)
+1562894564979:}
+1562894565010:rdata <- pdata[(1:nrow(pdata)-1),]
+1562894565031:rdata <- merge(
+1562894565050:rdata
+1562894565072:, csv.params$criteria$df[,c('id','name')]
+1562894565092:, by.x='id', by.y='id')
+1562894584590:assessmentValues
+1562894586235:pdata <- vdata$asDataFrame()
+1562894586708:pdata[['id']] <- rownames(pdata)
+1562894589130:rdata <- pdata[(1:nrow(pdata)-1),]
+1562894591487:rdata <- merge(
+1562894591509:rdata
+1562894591527:, csv.params$criteria$df[,c('id','name')]
+1562894591542:, by.x='id', by.y='id')
+1562894597348:View(rdata)
+1562894676692:##
+1562894676713:vdata <- PivotTable$new()
+1562894677015:vdata$addData(df)
+1562894678064:vdata$addColumnDataGroups(fields$assessmentValue)
+1562894678314:vdata$addRowDataGroups(fields$criteria)
+1562894678725:vdata$defineCalculation(calculationName = "Total", summariseExpression="n()")
+1562894678858:vdata$evaluatePivot()
+1562894685529:pdata <- vdata$asDataFrame()
+1562894685681:pdata[['id']] <- rownames(pdata)
+1562894686909:rdata <- pdata[(1:nrow(pdata)-1),]
+1562894690926:csv.params$criteria$df[,c('id','name')]
+1562895038725:runApp()
+1562895260182:runApp()
+1562908389648:runApp()
+1562908690986:runApp()
+1562908985120:runApp()
+1562910015085:c(1,2,3,4,5,6,7)[1]
+1562910036176:df
+1562910050395:df <- read_csv('data/assessment.csv')
+1562910091230:c(1,2,3,4,5,6)[c(1..)]
+1562910096661:c(1,2,3,4,5,6)[c(1,)]
+1562910186318:c(1,2,3,4,5,6)[1?]
+1562910188909:c(1,2,3,4,5,6)[1:]
+1562910208254:c(1,2,3,4,5,6)[1:6]
+1562910211425:c(1,2,3,4,5,6)[2:6]
+1562910391394:c(8,2,3,4,5,6)[1]
+1562910402475:c(8,2,3,4,5,6)[c(1)]
+1562910408286:c(8,2,3,4,5,6)[[c(1)]]
+1562910593134:runApp()
+1562910719416:runApp()
+1562910882692:runApp()
+1562910986259:runApp()
+1562911044657:runApp()
+1562911152652:unique(df$`Avaliação consolidadora?`)
+1562912356703:fields <- list(
+1562912356724:criteria='Cód. Critério', evidence='Cód. Evidência', appraiser='Avaliação consolidadora?'
+1562912356742:, assessmentValue='Avaliação da Evidência', technologyType='Tipo de Tecnologia'
+1562912356755:, period='Cód. Ciclo', dimension='Dimensão'
+1562912356774:)
+1562912521592:runApp()
+1562926064083:pdata <- vdata$asDataFrame()
+1562926064477:pdata[['id']] <- rownames(pdata)
+1562927390772:df <- read_csv('data/assessment.csv')
+1562927394103:View(df)
+1562928542908:fields <- list(
+1562928542927:criteria='Cód. Critério', evidence='Cód. Evidência', appraiser='Avaliação consolidadora?'
+1562928542949:, assessmentValue='Avaliação da Evidência', technologyType='Tipo de Tecnologia'
+1562928542971:, period='Cód. Ciclo', dimension='Dimensão'
+1562928542992:)
+1562928564684:fields$period
+1562928567584:fields$period
+1562930386899:# parameters to get data from CSVs
+1562930386915:default.csv.params <- function() {
+1562930386939:to_return <- list(
+1562930386957:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562930386979:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562930387003:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562930387017:, criteria = list(
+1562930387031:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562930387044:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562930387065:, technologyType = list(
+1562930387082:src='data/evidencias.csv', id='Tipo de Tecnologia', name="Tipo de Tecnologia"
+1562930387094:, fields=list(period='Cód. Ciclo'))
+1562930387109:, evidence = list(
+1562930387122:src='data/evidencias.csv', id='Cód. Evidência', name='Evidência'
+1562930387137:, fields=list(period='Cód. Ciclo', technologyType='Tipo de Tecnologia'))
+1562930387151:)
+1562930387166:for (key in names(to_return)) {
+1562930387182:if (!is.null(to_return[[key]][['src']])) {
+1562930387193:df <- read_csv(to_return[[key]][['src']])
+1562930387211:df[['id']] <- df[[to_return[[key]]$id]]
+1562930387225:df[['name']] <- concat.columns(df, to_return[[key]]$name, '.')
+1562930387240:to_return[[key]][['df']] <- df
+1562930387253:}
+1562930387270:}
+1562930387284:return(to_return)
+1562930387299:}
+1562930393379:csv.params = default.csv.params()
+1562930407193:csv.params$period$id
+1562930420989:csv.params$period$df
+1562932024208:# parameters to get data from CSVs
+1562932024233:default.csv.params <- function() {
+1562932024261:to_return <- list(
+1562932024276:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562932024295:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562932024320:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562932024339:, criteria = list(
+1562932024358:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562932024378:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562932024406:, technologyType = list(
+1562932024428:src='data/evidencias.csv', id='Tipo de Tecnologia', name="Tipo de Tecnologia"
+1562932024448:, fields=list(period='Cód. Ciclo'))
+1562932024467:, evidence = list(
+1562932024485:src='data/evidencias.csv', id='Cód. Evidência', name='Evidência'
+1562932024501:, fields=list(period='Cód. Ciclo', technologyType='Tipo de Tecnologia'))
+1562932024514:)
+1562932024539:for (key in names(to_return)) {
+1562932024556:if (!is.null(to_return[[key]][['src']])) {
+1562932024573:df <- read_csv(to_return[[key]][['src']])
+1562932024588:df[['id']] <- df[[to_return[[key]]$id]]
+1562932024601:df[['name']] <- concat.columns(df, to_return[[key]]$name, '.')
+1562932024619:to_return[[key]][['df']] <- df
+1562932024642:u_df <- unique(df[,c('id','name')])
+1562932024663:u_list <- as.list(u_df$name)
+1562932024678:names(u_list) <- u_df$id
+1562932024696:to_return[[key]][['unique']] <- u_list
+1562932024713:}
+1562932024729:}
+1562932024752:return(to_return)
+1562932024764:}
+1562932032592:csv.params = default.csv.params()
+1562932043136:csv.params$period$unique
+1562932466526:runApp()
+1562933370206:runApp()
+1562933634750:runApp()
+1562934145496:runApp()
+1562934309495:runApp()
+1562934423263:?validate
+1562934544425:runApp()
+1562934792623:runApp()
+1562935409309:runApp()
+1562935667918:runApp()
+1562935860123:runApp()
+1562935967554:runApp()
+1562936253360:runApp()
+1562936338613:runApp()
+1562937662397:runApp()
+1562939053873:p <- add_trace(
+1562939053888:p
+1562939053915:, r = df[[value]][[p_idx]] # $Pct[u_idx]
+1562939053931:, theta = df[[sd$fcontent$name]][u_idx]
+1562939053946:, name = paste0(period,':',value)
+1562939053961:)
+1562939061027:runApp()
+1562939394686:runApp()
+1562939740916:runApp()
+1562939914692:runApp()
+1562940158255:runApp()
+1562940327245:runApp()
+1562941637577:runApp()
+1562941780501:runApp()
+1562942143428:print(p_idx)
+1562942173095:runApp()
+1562943035392:?order
+1562943128239:runApp()
+1562943261950:head(10)
+1562943266597:?head
+1562943290442:df <- head(df,20)
+1562943299581:runApp()
+1562943772415:runApp()
+1562944035684:do.call(order, list(a=c(23,2,32,42,51,62), b=c(23,34,34,45,42)))
+1562944060015:?order
+1562944349193:runApp()
+1562945232222:?numericInput
+1562945328959:runApp()
+1562945530174:runApp()
+1562946566408:?order
+1562946752950:runApp()
+1562946906638:runApp()
+1562946959416:runApp()
+1562947089153:NA > 0
+1562947092596:(NA > 0)
+1562947098141:if (NA > 0) T
+1562947120701:as.numeric(NA)
+1562947219207:length(NA)
+1562947227843:length(NULL)
+1562947260113:T & F
+1562947263861:T && F
+1562947267353:T && T
+1562947420196:(NA >0)
+1562947557583:runApp()
+1562947639398:(NA >0)
+1562947641878:runApp()
+1562947933385:runApp()
+1562948200917:runApp()
+1562948451632:# RadarChart, Dot Chart
+1562948451652:#p <- plot_ly(type=ctype, mode='lines+markers')
+1562948451676:#if (dtype != 'ledfafarning-performance') {
+1562948451698:p <- plot_ly(type = ctype, fill = 'toself')
+1562948460897:runApp()
+1562948660016:runApp()
+1562948716463:runApp()
+1562950068362:runApp()
+1562950575903:runApp()
+1562953745995:runApp()
+1562953824485:runApp()
+1562955306841:?add_trace
+1562955542147:runApp()
+1562955969100:names(r) <- df[[value]][p_idx]
+1562955973762:runApp()
+1562956105929:runApp()
+1562956331524:schema(plot_ly())
+1562956334733:schema(plot_ly)
+1562956480959:runApp()
+1562956939539:title_ <- 'Assessments on Criteria Through Evidences'
+1562956943791:runApp()
+1562957335680:layout()
+1562957340363:?layout
+1562958556945:?plotlyOutput(
+1562958558889:)
+1562959831779:runApp()
+1562959932525:runApp()
+1562960297682:runApp()
+1562961665858:runApp()
+1562961975997:runApp()
+1562962294285:runApp()
+1562962582671:runApp()
+1562965618075:runApp()
+1562966646076:# parameters to get data from CSVs
+1562966646100:default.csv.params <- function() {
+1562966646140:to_return <- list(
+1562966646160:period = list(src='data/evidencias.csv', id='Cód. Ciclo', name='Ciclo')
+1562966646178:, assessmentValue = list(src='data/assessment.csv', id='Avaliação da Evidência', name='Avaliação da Evidência')
+1562966646204:, dimension = list(src='data/criterios.csv', id='Dimensão', name='Dimensão')
+1562966646221:, criteria = list(
+1562966646239:src='data/criterios.csv', id='Cód. Critério', name=c('Cód. Item Edital','Critério')
+1562966646255:, fields=list(dimension='Dimensão',criteria='Critério'))
+1562966646281:, technologyType = list(
+1562966646300:src='data/evidencias.csv', id='Tipo de Tecnologia', name="Tipo de Tecnologia"
+1562966646328:, fields=list(period='Cód. Ciclo'))
+1562966646368:, evidence = list(
+1562966646383:src='data/evidencias.csv', id='Cód. Evidência', name='Evidência'
+1562966646396:, fields=list(period='Cód. Ciclo', technologyType='Tipo de Tecnologia'))
+1562966646410:)
+1562966646431:for (key in names(to_return)) {
+1562966646445:if (!is.null(to_return[[key]][['src']])) {
+1562966646461:df <- read_csv(to_return[[key]][['src']])
+1562966646477:df[['id']] <- df[[to_return[[key]]$id]]
+1562966646492:df[['name']] <- concat.columns(df, to_return[[key]]$name, '.')
+1562966646504:to_return[[key]][['df']] <- df
+1562966646525:u_df <- unique(df[,c('id','name')])
+1562966646539:u_list <- as.list(u_df$name)
+1562966646549:names(u_list) <- u_df$id
+1562966646560:to_return[[key]][['unique']] <- u_list
+1562966646571:}
+1562966646581:}
+1562966646597:return(to_return)
+1562966646608:}
+1562966658647:csv.params = default.csv.params()
+1562966749078:csv.params$criteria
+1562966755552:csv.params$criteria$df
+1562966812568:csv.params$criteria$fields$dimension
+1562966816461:csv.params$criteria$fields
+1562966839945:csv.params$criteria$df[,c('id','name',csv.params$criteria$fields$dimension)]
+1562966995423:runApp()
+1562967706350:?plot_ly
+1562967737787:?add_trace
+1562967977637:mean(
+1562967979511:)
+1562967982638:?mean
+1562968068083:x <- unique(df[[csv.params$criteria$fields$dimension]])
+1562968073981:unique(df[[csv.params$criteria$fields$dimension]])
+1562968112774:unique(csv.params$criteria$df[[csv.params$criteria$fields$dimension]])
+1562968229392:lapply(unique(csv.params$criteria$df[[csv.params$criteria$fields$dimension]]), FUN = function(x) {
+1562968229415:mean(c(1,2,3,2,3,4,3,34,3,43,43,4,3))
+1562968229436:})
+1562968245211:vapply(unique(csv.params$criteria$df[[csv.params$criteria$fields$dimension]]), FUN = function(x) {
+1562968245241:mean(c(1,2,3,2,3,4,3,34,3,43,43,4,3))
+1562968245263:})
+1562968257126:lapply(unique(csv.params$criteria$df[[csv.params$criteria$fields$dimension]]), FUN = function(x) {
+1562968257152:mean(c(1,2,3,2,3,4,3,34,3,43,43,4,3))
+1562968257175:})
+1562968270491:unique(csv.params$criteria$df[[csv.params$criteria$fields$dimension]])
+1562968280938:?vapply(list, function, FUN.VALUE = type, ...)
+1562968292502:sapply(unique(csv.params$criteria$df[[csv.params$criteria$fields$dimension]]), FUN = function(x) {
+1562968292520:mean(c(1,2,3,2,3,4,3,34,3,43,43,4,3))
+1562968292537:})
+1562968313672:as.vector(sapply(unique(csv.params$criteria$df[[csv.params$criteria$fields$dimension]]), FUN = function(x) {
+1562968313687:mean(c(1,2,3,2,3,4,3,34,3,43,43,4,3))
+1562968313704:}))
+1562968341853:?add_trace
+1562968867464:runApp()
+1562969733917:runApp()
+1562970646047:runApp()
+1562971411792:runApp()
+1562971436266:runApp()
+1562972164569:runApp()
+1562972374006:runApp()
+1562973008494:runApp()
+1562973394709:runApp()
+1562973644570:runApp()
+1562975033687:runApp()
+1562996928069:library(readr)
+1562996928151:evidencias_pre <- read_csv("data/evidencias-pre.csv",
+1562996928172:locale = locale(encoding = "ISO-8859-1"))
+1562996928353:View(evidencias_pre)
+1562996947546:library(readr)
+1562996947576:evidencias <- read_csv("data/evidencias.csv")
+1562996947698:View(evidencias)
+1562998459423:library(readr)
+1562998459456:criterios <- read_csv("data/criterios.csv")
+1562998459531:View(criterios)
+1562998958716:colnames(evidencias)
+1562999441449:colnames(criteria)
+1562999446325:colnames(criterias)
+1562999454505:colnames(criteria)
+1562999464013:colnames(criterios)
+1562999630613:colnames(evidencias)
+1563001068297:userID
+1563001907102:runApp()
+1563002041208:install.packages("pivottabler")
+1563002793310:install.packages(c('pivottabler','dplyr'))
+1563002809662:install.packages(c('pivottabler','dplyr'))
+1563006718993:install.packages("pivottabler")
+1563006774858:runApp()
+1563006795626:runApp()
+1563006797976:runApp()
+1563006801149:# Load packages
+1563006801180:wants <- c('shiny','shinythemes','config','plotly','rjson','qdap','pivottabler')
+1563006801441:has <- wants %in% rownames(installed.packages())
+1563006802362:if (any(!has)) install.packages(wants[!has])
+1563006811275:rownames(installed.packages())
+1563006823617:runApp()
+1563006831818:?read.csv
+1563006839357:?read_csv
+1563006864090:installed.packages('dplyr')
+1563006885401:installed.packages('dplyr')

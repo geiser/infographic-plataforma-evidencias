@@ -1,0 +1,306 @@
+Cód. Critério,Cód. Item Edital,Critério,Dimensão
+30,2.1.1.a,Descrever se as funcionalidades da tecnologia cobr...,Tecnológica
+32,2.1.1.b,Indicar se as funcionalidades da tecnologia foram ...,Tecnológica
+33,2.1.2.b,Indicar se foram realizados testes para verificar ...,Tecnológica
+35,2.1.2.a,Explicitar se a tecnologia utilizada é indicada fa...,Tecnológica
+37,2.1.3.a,Apresentar quais são as evidências que demonstram ...,Tecnológica
+38,2.1.3.b,Indicar se existe documentação detalhada que permi...,Tecnológica
+41,2.2.1.b,Informar se a tecnologia pode ser facilmente utili...,Tecnológica
+43,2.2.1.a,Detalhar qual a adaptação necessária no ambiente e...,Tecnológica
+46,2.2.2.a,Descrever se a tecnologia permite o compartilhamen...,Tecnológica
+48,2.2.2.b,Explicitar se é possível extrair os dados da tecno...,Tecnológica
+49,2.8.a,Este critério deve explicitar como foram realizado...,Tecnológica
+52,2.3.1.a,Descrever se foram realizadas avaliações periódica...,Tecnológica
+53,2.7.2.a,Detalhar se existem mecanismos que previnem e dete...,Tecnológica
+54,2.3.1.b,Informar se foi realizada alguma análise de maturi...,Tecnológica
+55,2.7.1.a,Descrever como os dados coletados pela tecnologia ...,Tecnológica
+57,2.3.2.a,Explicitar se existem uma documentação detalhada s...,Tecnológica
+59,2.3.2.b,Indicar qual o grau de disponibilidade de uso da t...,Tecnológica
+61,2.6.3.a,Detalhar se a tecnologia proposta pode substituir ...,Tecnológica
+62,2.3.3.a,Apresentar se existem funcionalidades na tecnologi...,Tecnológica
+63,2.6.3.b,Indicar se a tecnologia proposta pode substituir u...,Tecnológica
+65,2.3.3.b,Informar se foram desenvolvidos estudos para ident...,Tecnológica
+66,2.6.2.b,Informar quão difícil é instalar a tecnologia no a...,Tecnológica
+67,2.3.4.a,"Descrever se em caso de falhas, existem funcionali...",Tecnológica
+69,2.6.2.a,Descrever quais conhecimentos e infraestrutura nec...,Tecnológica
+70,2.4.1.a,Explicitar se foram realizados estudos sobre a fac...,Tecnológica
+71,2.6.1.a,Descrever se a tecnologia pode ser utilizada ou ad...,Tecnológica
+72,2.4.1.b,Indicar se o tempo de esperar entre uma ação e o f...,Tecnológica
+74,2.6.1.b,Explicitar se a tecnologia pode ser facilmente ada...,Tecnológica
+75,2.4.2.b,Informar se foi realizado algum estudo para verifi...,Tecnológica
+77,2.4.2.a,Indicar quais as necessidades de expansão de uso d...,Tecnológica
+78,2.5.5.b,Informar se a tecnologia permite realizar testes d...,Tecnológica
+79,2.4.3.a,Descrever se a tecnologia possui capacidade de ser...,Tecnológica
+80,2.5.5.a,Indicar se existem formas eficazes de identificar ...,Tecnológica
+81,2.5.1.b,Informar se a arquitetura utilizada pela tecnologi...,Tecnológica
+82,2.5.4.a,Detalhar se a tecnologia educacional pode ser modi...,Tecnológica
+83,2.5.1.a,Descrever se o conteúdo desenvolvido na plataforma...,Tecnológica
+84,2.5.2.a,Indicar se a tecnologia viabiliza a reusabilidade ...,Tecnológica
+85,2.5.3.b,Explicitar se a tecnologia permite visualizar os d...,Tecnológica
+86,2.5.3.a,Descrever se a tecnologia possui mecanismos para u...,Tecnológica
+301,2.7.1.b,Indicar se a tecnologia possui mecanismos para que...,Tecnológica
+31,3.8.1.1.a,Apresentar se o texto escrito ou oral que apresent...,Educacional
+34,3.8.1.1.c,Indicar se o conteúdo educacional disponível foi t...,Educacional
+36,3.8.1.1.b,Explicitar se foi realizada uma análise sobre o ní...,Educacional
+39,3.8.1.2.a,Indicar se a tecnologia oferece ao usuário mais de...,Educacional
+40,3.8.1.3.a,Descrever quão aderente o conteúdo é em relação à ...,Educacional
+42,3.8.1.3.b,Explicitar como as funcionalidades da tecnologia a...,Educacional
+44,3.8.1.4.b,Informar se o conteúdo apresentado possui material...,Educacional
+45,3.8.1.4.a,Apresentar se o conteúdo apresentado possui materi...,Educacional
+47,3.8.2.1.a,Descrever se o conteúdo foi desenvolvido considera...,Educacional
+50,3.8.2.2.a,Descrever se a apresentação do conteúdo e das func...,Educacional
+51,3.8.2.3.a,Descrever se o conteúdo foi adequadamente organiza...,Educacional
+56,3.8.2.4.a,Explicitar se o conteúdo e funcionalidades podem s...,Educacional
+60,3.8.3.1.a,Descrever se a tecnologia permite adaptar ou perso...,Educacional
+64,3.8.3.1.b,Indicar quais são as evidências que demonstram que...,Educacional
+68,3.8.3.2.a,Orientar se o conteúdo e funcionalidades foram pre...,Educacional
+73,3.8.3.3.b,Indicar se existem funcionalidades que aumentem o ...,Educacional
+76,3.8.3.3.a,Apresentar se a tecnologia foi desenvolvida de for...,Educacional
+87,3.8.3.4.a,Descrever se a tecnologia permite que os alunos ex...,Educacional
+88,3.8.4.1.a,Indicar se existe processo para verificação de err...,Educacional
+89,3.8.4.2.a,Orientar se o conteúdo pode ser reutilizado com ou...,Educacional
+90,3.8.5.1.b,Indicar se a tecnologia permite acompanhar as ativ...,Educacional
+91,3.8.5.1.a,Descrever se existem funcionalidades para ajudar o...,Educacional
+92,3.8.5.2.c,Orientar quais dados e métodos foram utilizados pa...,Educacional
+93,3.8.5.2.b,Apresentar se existem evidências que demonstram be...,Educacional
+94,3.8.5.3.b,Indicar se a tecnologia permite realizar avaliaçõe...,Educacional
+95,3.8.5.3.a,Descrever se a tecnologia permite avaliar a evoluç...,Educacional
+96,3.8.5.4.a,Orientar se a tecnologia tem como pressuposto uma ...,Educacional
+97,3.8.6.1.a,Informar se são oferecidas ao professor informaçõe...,Educacional
+98,3.8.6.2.a,Descrever se existem orientações para utilizar a t...,Educacional
+99,3.8.6.3.a,Explicitar se a tecnologia possui recursos (funcio...,Educacional
+100,3.8.6.4.a,Indicar se existem planos de aula desenvolvidos e ...,Educacional
+101,3.8.7.1.a,Informar se são oferecidas ao aluno informações pr...,Educacional
+102,3.8.7.2.a,Descrever se existem orientações para utilizar a t...,Educacional
+103,3.8.7.3.a,Explicitar se a tecnologia possui recursos (funcio...,Educacional
+104,3.8.7.4.a,Indicar se existem planos de aula desenvolvidos e ...,Educacional
+105,3.8.8.1.a,Informar se são oferecidas ao gestor informações p...,Educacional
+106,3.8.8.2.a,Descrever se existem orientações para utilizar a t...,Educacional
+112,4.1.1.d,O aprimoramento da qualificação dos professores da...,Educacional
+113,4.1.1.e,O desenvolvimento intelectual e profissional dos p...,Educacional
+114,4.1.1.f,O diálogo e a articulação com a prática pedagógica...,Educacional
+115,4.1.1.g,O favorecimento à reflexão do coletivo de professo...,Educacional
+117,4.1.1.a,A perspectiva orientada para a realização dos dire...,Educacional
+118,4.1.1.c,Articulação entre que os objetivos de aprendizagem...,Educacional
+119,4.1.1.b,A valorização do saber e do fazer do professor....,Educacional
+120,4.2.1.c,O aprimoramento da qualificação dos profissionais ...,Educacional
+121,4.2.1.d,O desenvolvimento intelectual e profissional dos p...,Educacional
+122,4.2.1.b,A valorização do saber e do fazer dos profissionai...,Educacional
+123,4.2.1.e,O diálogo e a articulação da atuação desses profis...,Educacional
+124,4.2.1.f,O favorecimento da atuação desses profissionais na...,Educacional
+125,4.2.1.a,A perspectiva orientada para a realização dos dire...,Educacional
+126,4.3.1.i,Fortalecimento dos processos e práticas de gestão ...,Educacional
+127,4.3.1.e,Contribuição para melhoria da qualidade do ensino...,Educacional
+128,4.3.1.a,Adequação e coerência dos instrumentos e processos...,Educacional
+129,4.3.1.b,Atendimento à diversidade e pluralidade das difere...,Educacional
+130,4.3.1.d,Consistência nos processos de levantamento de dado...,Educacional
+131,4.3.1.c,Capacidade de promoção e implementação de novas pr...,Educacional
+132,4.3.1.g,"Favorecimento à desburocratização, transparência e...",Educacional
+133,4.3.1.h,Fortalecimento da autonomia e do projeto político ...,Educacional
+134,4.3.1.f,"Educação para a democracia e cidadania, como press...",Educacional
+135,4.3.1.l,"Valorização dos profissionais da educação, docente...",Educacional
+136,4.3.1.j,"Implantação de plano de carreira, cargos e salário...",Educacional
+137,4.3.1.k,Participação dos conselhos de educação na elaboraç...,Educacional
+138,4.4.1.h,Modernização da qualidade dos processos de organiz...,Educacional
+139,4.4.1.a,Democratização da gestão da escola (ampliação da p...,Educacional
+140,4.4.1.i,"Participação da comunidade na elaboração, implemen...",Educacional
+141,4.4.1.g,Melhoria do planejamento da unidade educativa como...,Educacional
+142,4.4.1.c,Desenvolvimento de processos de gestão que assegur...,Educacional
+143,4.4.1.e,Incorporação ao núcleo gestor da unidade de ensino...,Educacional
+144,4.4.1.d,Educação para a democracia e cidadania como pressu...,Educacional
+145,4.4.1.b,Desenvolvimento de critérios combinados com mecani...,Educacional
+146,4.4.1.j,"Resgate, promoção e preservação da memória institu...",Educacional
+147,4.4.1.f,Mecanismo de promoção e valorização dos espaços pr...,Educacional
+148,4.5.1.l,Metodologia e teoria que embasam a proposta de ava...,Educacional
+149,4.5.1.i,"Clareza, validade, confiabilidade, comparabilidade...",Educacional
+150,4.5.1.f,Capacidade de gerar informações a respeito do níve...,Educacional
+151,4.5.1.g,Capacidade de gerar informações a respeito dos fat...,Educacional
+152,4.5.1.c,Capacidade das informações geradas serem utilizada...,Educacional
+153,4.5.1.d,Capacidade das informações geradas serem utilizada...,Educacional
+154,4.5.1.e,Capacidade das informações geradas serem utilizada...,Educacional
+155,4.5.1.h,Capacidade de gerar informações individualizadas p...,Educacional
+156,4.5.1.k,"Mérito e abrangência da proposta, para a dissemina...",Educacional
+157,4.5.1.j,Impactos esperados no desenvolvimento das atividad...,Educacional
+158,4.5.1.a,Aderência da proposta à política de educação básic...,Educacional
+159,4.5.1.b,Capacidade das informações e indicadores propostos...,Educacional
+182,4.6.1.c,Correção dos conceitos e conteúdos abordados...,Educacional
+186,4.6.1.e,Metodologias específicas relativas aos campos de e...,Educacional
+187,4.6.1.d,"Metodologias específicas relativas à leitura, comp...",Educacional
+188,4.6.1.f,Os reflexos positivos concretos sobre o desenvolvi...,Educacional
+198,4.6.1.a,"Apresentação de desafios que, para sua solução, de...",Educacional
+200,4.6.1.b,Apresentação de recursos e espaços interativos que...,Educacional
+201,4.7.1.a,Aprendizagem baseada em projetos integrados...,Educacional
+204,4.7.1.e,Estudos de caso interdisciplinares...,Educacional
+206,4.7.1.f,Protagonismo estudantil...,Educacional
+208,4.7.1.d,Criação e monitoramento de redes de aprendizagem i...,Educacional
+210,4.7.1.c,Aprendizagem estudantil com envolvimento de famili...,Educacional
+212,4.7.1.b,Aprendizagem coletiva e compartilhada com a comuni...,Educacional
+218,4.9.1.b,Campos de experiência da educação infantil - consi...,Educacional
+221,4.9.1.j,Matemática - potencialização de aprendizagens mate...,Educacional
+222,4.9.1.h,Letramento/Matemática - desenvolvimento das compet...,Educacional
+224,4.9.1.g,Letramento/Alfabetização/Língua Portuguesa - desen...,Educacional
+227,4.9.1.c,"Ciências, Física, Química e Biologia - desenvolvim...",Educacional
+228,4.9.1.f,História e Geografia - estudo da relação entre os ...,Educacional
+229,4.9.1.i,Línguas Estrangeiras - introdução de estruturas bá...,Educacional
+230,4.9.1.a,Artes - articulação de conhecimentos sistematizado...,Educacional
+231,4.9.1.e,Filosofia e Sociologia - materiais e tecnologias q...,Educacional
+232,4.9.1.d,Educação Física - (re)construção de um conjunto de...,Educacional
+233,4.10.1.a,As especificidades das diferentes faixas etárias e...,Educacional
+234,4.10.1.b,As especificidades em termos de perfis diferenciad...,Educacional
+235,4.10.1.d,As especificidades em termos de perfis diferenciad...,Educacional
+236,4.10.1.e,As especificidades em termos de perfis diferenciad...,Educacional
+237,4.10.1.c,As especificidades em termos de perfis diferenciad...,Educacional
+238,4.12.1.c,"Incentivo às práticas de recreação, lazer e compet...",Educacional
+239,4.12.1.a,Ampliação das experiências e da partilha de código...,Educacional
+240,4.12.1.d,Incentivo às práticas esportivas que permitam o de...,Educacional
+241,4.12.1.e,"Promoção da saúde pela cooperação, socialização e ...",Educacional
+242,4.12.1.b,Consistência da Tecnologia Educacional proposta co...,Educacional
+243,4.14.1.a,Elaboração de tecnologias que incentivem o empreen...,Educacional
+244,4.14.1.b,"Promoção da educação para o consumo consciente, re...",Educacional
+245,4.14.2.c,"Desenvolvimento de valores, conhecimentos e compet...",Educacional
+246,4.14.2.b,"Desenvolvimento da cultura da prevenção, devido ao...",Educacional
+247,4.14.2.a,"Compreensão do mundo financeiro, do universo dos t...",Educacional
+248,4.14.2.e,"Promoção da mobilidade social, isto é, da capacida...",Educacional
+249,4.14.2.d,"Formação mais crítica de crianças e jovens, ajudan...",Educacional
+250,4.15.1.a,Educação em Direitos Humanos centrada na valorizaç...,Educacional
+254,4.16.1.g,Características que considerem conhecimentos e sab...,Educacional
+255,4.16.1.e,Características que considerem a diversidade dos s...,Educacional
+256,4.16.1.f,Características que considerem as diferenças entre...,Educacional
+257,4.16.1.d,Características capazes de articular/relacionar sa...,Educacional
+258,4.16.1.h,Características que considerem os conhecimentos pr...,Educacional
+259,4.16.1.j,Características que valorizem o papel que tem a EJ...,Educacional
+260,4.16.1.i,Características que valorizem o papel do educador ...,Educacional
+261,4.16.1.c,"Característica interdisciplinar e integrada, englo...",Educacional
+262,4.16.1.a,Característica de articulação entre educação básic...,Educacional
+263,4.16.1.b,Característica de reconhecimento das relações e di...,Educacional
+264,4.17.1.a,Com-Vida / Agenda 21 na Escola: Constituição e/ou ...,Educacional
+265,4.17.1.b,Educação para a Sustentabilidade: Diagnóstico da s...,Educacional
+266,4.17.1.c,Horta Escolar e/ou Comunitária - Implantação da ho...,Educacional
+267,4.18.1.a,"Atividades de característica interdisciplinar, eng...",Educacional
+268,4.18.1.b,Criação de estratégias de promoção da saúde e prev...,Educacional
+269,4.19.1.a,"Característica interdisciplinar, englobando produt...",Educacional
+270,4.19.1.c,"Interação, atividade e participação conjunta de to...",Educacional
+271,4.19.1.b,"Consideração dos marcos legais, políticos e pedagó...",Educacional
+272,4.20.1.a,Capacidade de desenvolver a política de educação p...,Educacional
+273,4.20.1.b,Consistência com as Diretrizes Curriculares Nacion...,Educacional
+274,4.20.1.c,"Consistência com as sociodiversidades históricas, ...",Educacional
+275,4.20.1.d,Consistência com metodologias adequadas ao ensino ...,Educacional
+276,4.21.1.a,A consistência com as Diretrizes Curriculares Naci...,Educacional
+277,4.21.1.b,O desenvolvimento do ensino e da aprendizagem em s...,Educacional
+278,4.22.1.b,A interculturalidade na promoção do diálogo entre ...,Educacional
+279,4.22.1.e,"O respeito à organização sociopolítica, cultural e...",Educacional
+280,4.22.1.d,"O monolinguismo, o bilinguismo e o multilinguismo,...",Educacional
+281,4.22.1.f,Os processos próprios e diferenciados de ensino e ...,Educacional
+282,4.22.1.a,A criação de ferramentas educacionais intercultura...,Educacional
+283,4.22.1.c,O desenvolvimento do ensino e da aprendizagem em s...,Educacional
+284,4.23.1.a,A capacidade de desenvolver o respeito à diversida...,Educacional
+285,4.23.1.c,Capacidade de valorizar a identidade da escola do ...,Educacional
+286,4.23.1.e,"O respeito à legislação, às diretrizes e às normas...",Educacional
+287,4.23.1.b,A promoção de metodologias condizentes com a pedag...,Educacional
+288,4.23.1.d,O desenvolvimento do ensino e da aprendizagem em s...,Educacional
+289,4.8.1.a,Auxilio no desenho e planejamento para flexibiliza...,Educacional
+290,4.11.1.a,"Educação, Cultura e Artes que vise incentivar a pr...",Educacional
+293,4.13.1.a,"Educação, Comunicação, Uso de Mídias e Cultura Dig...",Educacional
+302,3.8.5.2.a,Apresentar se existem evidências que demonstram be...,Educacional
+107,4.3.1.a,O conteúdo da TE deve ser robusto o suficiente par...,Acessibilidade
+108,4.3.2.a,A tecnologia deve ser autossuficiente na apresenta...,Acessibilidade
+109,4.3.3.b,Apresentar versão alternativa ao que é apresentado...,Acessibilidade
+110,NA,Permitir o controle do tempo de apresentação da in...,Acessibilidade
+111,NA,Prover versão alternativa em texto para conteúdos ...,Acessibilidade
+160,5.1.1.a,Apresentar saída alternativa em formato de áudio o...,Acessibilidade
+161,5.1.2.a,Apresentar informações gráficas em formato alterna...,Acessibilidade
+162,5.1.3.a,Apresentar audiodescrição e/ou descrição textual p...,Acessibilidade
+163,5.1.4.a,Apresentar conversão automática para formato de áu...,Acessibilidade
+164,5.1.5.a,Garantir a linearidade no fluxo da informação na a...,Acessibilidade
+165,5.1.6.a,Tornar o acesso ao conteúdo e as funcionalidades o...,Acessibilidade
+166,5.1.7.a,Apresentar links com descrição do conteúdo a ser d...,Acessibilidade
+167,5.1.8.a,Apresentar formato alternativo de áudio ou tátil p...,Acessibilidade
+168,5.1.9.a,Permitir o aumento ou redução da fonte do texto ap...,Acessibilidade
+169,5.1.10.a,Permitir ampliação total ou parcial do que está se...,Acessibilidade
+170,5.1.11.a,Permitir o aumento do espaçamento entre as linhas ...,Acessibilidade
+171,5.1.12.a,"Permitir alteração no contraste, entre claro e esc...",Acessibilidade
+172,5.1.13.a,Permitir alteração nas cores do primeiro e segundo...,Acessibilidade
+173,5.1.14.a,Permitir ajuste no brilho e/ou iluminação do que e...,Acessibilidade
+174,5.1.15.a,Apresentar alternativa para uso de cores como meio...,Acessibilidade
+175,5.1.16.a,Correlacionar a saída alternativa de áudio ao que ...,Acessibilidade
+176,5.1.17.a,Garantir a mesma configuração e estrutura do que é...,Acessibilidade
+177,5.1.18.a,Permitir o controle da velocidade do que é apresen...,Acessibilidade
+178,5.2.1.a,As informações gerais da Tecnologia Educacional sã...,Acessibilidade
+179,5.2.2.a,Existe indicação clara sobre a disponibilidade do ...,Acessibilidade
+180,5.2.3.a,Uso de sinais sonoros são substituídos por sinais ...,Acessibilidade
+181,5.2.4.a,No caso de explicações veiculadas em áudio ou em v...,Acessibilidade
+183,5.2.5.a,O produto deve disponibilizar alternativas à opera...,Acessibilidade
+184,5.2.6.a,Preferência aos recursos escritos para a operação ...,Acessibilidade
+185,5.2.7.a,O material escrito usado para veicular as informaç...,Acessibilidade
+189,5.2.8.a,As informações gerais da Tecnologia Educacional sã...,Acessibilidade
+190,5.2.9.a,Existe indicação clara sobre a disponibilidade de ...,Acessibilidade
+191,5.2.10.a,Uso de sinais sonoros devem ser substituídos por s...,Acessibilidade
+192,5.2.11.a,As informações veiculadas devem estar disponíveis ...,Acessibilidade
+193,5.2.12.a,"A organização das informações visuais, linguística...",Acessibilidade
+194,5.2.13.a,O produto deve disponibilizar alternativas à opera...,Acessibilidade
+195,5.2.14.a,Preferência aos recursos escritos para a operação ...,Acessibilidade
+196,5.2.15.a,A sinalização provida nos vídeos deverá ser clara ...,Acessibilidade
+197,5.2.16.a,Os sinais específicos da Libras que forem usados d...,Acessibilidade
+199,5.3.1.a,"Sempre que partes operáveis exijam agarrar, compri...",Acessibilidade
+202,5.3.2.a,Possibilita substituir o uso do mouse por vias alt...,Acessibilidade
+203,5.3.3.a,Possibilita o uso de Simuladores de Teclado...,Acessibilidade
+205,5.3.4.a,Possibilitar opções de ajuste de temporização no c...,Acessibilidade
+207,5.3.5.a,A repetição da ação de teclar é acionada por press...,Acessibilidade
+209,5.3.6.a,"Quando um teclado alfanumérico, numérico ou contro...",Acessibilidade
+211,5.3.7.a,Requer ações simultâneas do usuário para o acionam...,Acessibilidade
+213,5.4.1.a,"Apresentar uma linguagem simples e objetiva, de pr...",Acessibilidade
+214,5.4.2.a,As informações visuais que apresenta funcionam com...,Acessibilidade
+215,5.4.3.a,A tecnologia educativa oferece constante feedback ...,Acessibilidade
+216,5.4.4.a,Concretiza o conteúdo através de exemplos....,Acessibilidade
+217,5.4.5.a,Permite o livre retorno a conteúdos anteriores par...,Acessibilidade
+219,5.4.6.a,Oferece exercícios em formatos variados para a con...,Acessibilidade
+220,5.4.7.a,Sugerir materiais e métodos alternativos para apoi...,Acessibilidade
+223,5.4.8.a,Oferece versão de acesso via tela sensível ao toqu...,Acessibilidade
+225,5.4.9.a,Possibilita a realização livre de pausas para inte...,Acessibilidade
+226,5.4.10.a,Apresenta alternativas à escrita no recebimento de...,Acessibilidade
+305,4.3.3.a,Apresentar versão alternativa ao que é apresentado...,Acessibilidade
+306,4.3.3.c,Permitir o controle do tempo de apresentação da in...,Acessibilidade
+307,NA,Prover versão alternativa em texto para conteúdos ...,Acessibilidade
+308,NA,Todas as funcionalidades relevantes aos objetivos ...,Acessibilidade
+309,4.3.4.a,Garantir tempo suficiente para operação dos elemen...,Acessibilidade
+310,NA,Textos e elementos não-textuais linguísticos relev...,Acessibilidade
+311,4.3.5.b,Auxiliar os usuários a identificar os erros de uso...,Acessibilidade
+312,4.3.5.c,Auxiliar os usuários a retornar ao uso da tecnolog...,Acessibilidade
+313,NA,Manter ou adaptar a estrutura de navegação e dos c...,Acessibilidade
+314,NA,Usuários cegos/sem visão. Quando a TE fornece modo...,Acessibilidade
+315,NA,Usuários com visão limitada. Quando a TE fornece m...,Acessibilidade
+316,NA,Usuários com percepção limitada ou sem percepção d...,Acessibilidade
+317,NA,Usuários sem audição. Quando a TE fornece modo aud...,Acessibilidade
+318,NA,Usuários com audição limitada. Quando a TE fornece...,Acessibilidade
+319,NA,Usuários com limitações gnósicas visuais/visio-ver...,Acessibilidade
+320,NA,Usuários com limitações gnósicas auditivas/áudio-v...,Acessibilidade
+321,4.5.2.g,Usuários sem fala. Quando a TE fornece modo de ace...,Acessibilidade
+322,4.5.2.b,Usuários com fala limitada. Quando a TE fornece mo...,Acessibilidade
+323,4.5.2.e,Usuários com mobilidade reduzida. Quando a TE forn...,Acessibilidade
+324,4.5.2.a,Usuários com alcance ou força motora reduzida. Qua...,Acessibilidade
+325,4.5.2.d,Usuários com limitações no controle motor. Quando ...,Acessibilidade
+326,4.5.2.f,Usuários com movimento ou força na mão limitados. ...,Acessibilidade
+327,4.5.2.c,Usuários com limitações de expressão pela escrita....,Acessibilidade
+328,4.5.3.a,Usuários com compreensão limitada da fala. A TE de...,Acessibilidade
+329,4.5.3.b,Usuários com compreensão limitada da linguagem esc...,Acessibilidade
+330,4.5.3.d,Usuários com limitação do controle voluntário do c...,Acessibilidade
+331,4.5.3.c,Usuários com limitação do controle atencional. A T...,Acessibilidade
+332,4.5.3.h,Usuários com retenção da informação visual limitad...,Acessibilidade
+333,4.5.3.g,Usuários com retenção da informação auditiva/áudio...,Acessibilidade
+334,4.5.3.f,Usuários com limitação na compreensão do pensament...,Acessibilidade
+335,4.5.3.e,Usuários com limitação do pensamento abstrato. A T...,Acessibilidade
+336,NA,Todas as funcionalidades relevantes aos objetivos ...,Acessibilidade
+337,4.3.4.b,Garantir tempo suficiente para operação dos elemen...,Acessibilidade
+338,NA,Textos e elementos não textuais linguísticos relev...,Acessibilidade
+339,4.3.5.a,Auxiliar os usuários a identificar os erros de uso...,Acessibilidade
+340,4.3.5.d,Auxiliar os usuários a retornar ao uso da tecnolog...,Acessibilidade
+341,NA,Manter ou adaptar a estrutura de navegação e dos c...,Acessibilidade
+21,NA,Número de escolas públicas que atualmente são usuá...,Ação
+22,NA,Número de escolas privadas que atualmente são usuá...,Ação
+23,NA,Número de alunos de escolas públicas que atualment...,Ação
+24,NA,Número de alunos de escolas privadas que atualment...,Ação
+25,NA,Número de municípios e estados em que a tecnologia...,Ação
+26,NA,"Taxa de reutilização dos últimos 5 anos, ou seja, ...",Ação
+27,NA,Há avaliação de impacto do uso da tecnologia?...,Ação
+28,NA,Esta avaliação de impacto foi realizada por uma or...,Ação
+29,NA,A avaliação de impacto é capaz de demonstrar causa...,Ação

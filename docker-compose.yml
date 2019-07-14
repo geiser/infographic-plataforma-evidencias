@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  shiny:
+    build:
+      context: ./docker/shiny
+      target: prod
+    image: geiser/infographic-plataforma-evidencias_shiny
+    container_name: infographic-plataforma-evidencias_shiny
+    ports:
+      - "3838:3838"
+    volumes:
+      - '.:/srv/shiny-server/infographic-plataforma-evidencias'
+      - './shiny_logs:/var/log/shiny-server'
