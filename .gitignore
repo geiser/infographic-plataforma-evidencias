@@ -34,3 +34,17 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+
+
+tmp/*
+shiny_logs/*
+config.yml
+.DS_Store
+.DS_Store?
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+Makefile
+docker-compose.service
+
