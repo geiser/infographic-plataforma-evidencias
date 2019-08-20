@@ -35,3 +35,8 @@ dfa <- merge(dfa, dfc, by='Cód. Critério')
 write_csv(dfa, 'data/assessment-log.csv')
 write_csv(dfa, 'data/assessment.csv')
 
+##
+dfga <- read_csv('data/geo-appraisers-pre.csv', locale=locale(encoding = "latin1"))
+write_csv(dfga, 'data/geo-appraisers.csv')
+
+

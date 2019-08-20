@@ -36,6 +36,8 @@ vignettes/*.pdf
 rsconnect/
 
 
+.rstudio/
+
 tmp/*
 shiny_logs/*
 config.yml

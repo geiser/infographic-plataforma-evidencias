@@ -8,5 +8,10 @@ LABEL org.label-schema.license="GPL-3.0" \
 
 # Install R packages
 RUN install2.r -s pivottabler \
-	&& install2.r -s readr
+	&& install2.r -s readr \
+	&& install2.r -s qdap \
+	&& install2.r -s rjson \
+	&& install2.r -s brazilmaps \
+	&& install2.r -s PTXQC \
+	&& install2.r -s shinyjs
 

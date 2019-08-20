@@ -7,9 +7,6 @@ help: ## This help.
 
 .DEFAULT_GOAL := all
 
-config.yml:
-	@echo 'config.yml is necessary copying from config.default.yml'
-	cp config.default.yml config.yml
 
 all: pull build ## Pull and build the images to the project
 
@@ -29,21 +26,21 @@ clean: ## Remove containers and images related to the project
 	@rm docker-compose.service
 	@rm Makefile
 
-run: config.yml ## Run a project service in the terminal
+run: ## Run a project service in the terminal
 ifndef service
 	$(error service variable is not set. Use 'make run service={service}')
 else
 	$(DC) -p $(APP_NAME) run --rm --service-ports $(service)
 endif
 
-shell: config.yml ## Run interactive shell in the container of service
+shell: ## Run interactive shell in the container of service
 ifndef service
 	$(error service variable is not set. Use 'make shell service={service}')
 else
 	$(DC) -p $(APP_NAME) run --rm --entrypoint /bin/bash $(service)
 endif
 
-up: config.yml ## Spin up the project services as containers
+up: ## Spin up the project services as containers
 	$(DC) -p $(APP_NAME) up --no-build -d $(service)
 
 start: stop ## Start the project services as containers
