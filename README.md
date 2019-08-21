@@ -56,8 +56,8 @@ sudo make install
 
 To start a service {shiny} of the project and to run at startup, You need to use the following codes:
 ```
-sudo systemctl start infographic-plataforma-evidencias@{shiny}
-sudo systemctl enable infographic-plataforma-evidencias@{shiny}
+sudo systemctl start infographic-plataforma-evidencias@shiny
+sudo systemctl enable infographic-plataforma-evidencias@shiny
 sudo systemctl daemon-reload
 ```
 
