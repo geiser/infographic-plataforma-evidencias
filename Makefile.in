@@ -96,7 +96,7 @@ else
 endif
 
 # Docker installing as systemd
-install: ## Install a service of the project as systemd
+install: all ## Install a service of the project as systemd
 	@mkdir -p $(PREFIX)
 ifneq ($(shell pwd),$(PREFIX))
 	@cp -v *.R $(PREFIX)/
