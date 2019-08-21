@@ -11,5 +11,7 @@ RUN install2.r -s pivottabler \
 	&& install2.r -s readr \
 	&& install2.r -s qdap \
 	&& install2.r -s rjson \
-	&& install2.r -s shinyjs
+        && install2.r -s shinyjs
+
+RUN install2.r -s PTXQC 
 
