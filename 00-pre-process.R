@@ -17,7 +17,11 @@ concat.columns <- function(df, columns, sep='') {
 
 ## remove unecessary information and save using UTF-8 encoding 
 
-dfe <- read_csv('data/evidencias-pre.csv', locale=locale(encoding = "latin1"))
+dfe1 <- read_csv('data/evidencias-pre.csv', locale=locale(encoding = "latin1"))
+dfe2 <- read_csv('data/evidencias-pre2.csv', locale=locale(encoding = "utf-8"))
+dfe2 <- dfe2[,c(colnames(dfe1))]
+dfe <- dfe1[!dfe1$`Cód. Evidência` %in% dfe2$`Cód. Evidência`,]
+dfe <- rbind(dfe, dfe2)
 write_csv(dfe, 'data/evidencias.csv')
 
 dfc <- read_csv('data/criterios-pre.csv', locale=locale(encoding = "latin1"))
@@ -38,5 +42,3 @@ write_csv(dfa, 'data/assessment.csv')
 ##
 dfga <- read_csv('data/geo-appraisers-pre.csv', locale=locale(encoding = "latin1"))
 write_csv(dfga, 'data/geo-appraisers.csv')
-
-

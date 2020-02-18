@@ -89,14 +89,17 @@ get_data <- function(dtype, filters = list(), options = list(), csv.params = def
                      , orderBy = options$orderBy)
     , csv.params = csv.params))
   
+  dir.create(file.path(getwd(), 'tmp'), showWarnings = FALSE)
   filename <- paste0(getwd(),'/tmp/get_data_',params_code,'.rds')
   if (file.exists(filename)) {
     return(readRDS(filename))
   }
+  
   library(pivottabler)
   if (length(options$assessmentValue) == 0) return(NULL)
  
   df <- read_csv('data/assessment.csv')
+  
   fields <- list(
     id=list(period = 'Cód. Ciclo'
             , technologyType = 'Tipo de Tecnologia'
@@ -133,6 +136,15 @@ get_data <- function(dtype, filters = list(), options = list(), csv.params = def
       } else {
         idx <- idx & (df[[fields$id$assessmentFrom]] == 'N')
       }
+    }
+    
+    ## (TODO): Remove ugly hack to generate pie charts about cicle 2  
+    if (length(filters$period) == 1 && (filters$period == "61" || filters$period == "2")) {
+      df <- read_csv('data/evidencias.csv')
+      rel <- read_csv('data/evidencias-pre2.csv')[,c(csv.params$evidence$id,csv.params$criteria$id)]
+      df <- merge(df, rel)
+      df <- merge(df, read_csv('data/criterios.csv'))
+      idx <- rep(T, nrow(df))
     }
     
     for (nfilter in names(filters)) {
@@ -257,7 +269,7 @@ get_plotly <- function(dtype, ctype, filters = list(), options = list(), csv.par
   library(plotly)
   
   sd <- get_data(dtype, filters = filters, options = options, csv.params = csv.params)
-    
+  
   # RadarChart, Dot Chart
   p <- plot_ly()
   
@@ -378,7 +390,7 @@ get_plotly <- function(dtype, ctype, filters = list(), options = list(), csv.par
           p
           , labels = options$assessmentValue
           , title = list(
-            text = paste0("\n\n", sum(vals), ' Avaliações de Evidências\n', lgroup, '\n(Ciclo 1)')
+            text = paste0("\n\n", sum(vals), ' Avaliações de Evidências\n', lgroup, '\n(', group,')')
             , font = list(size=options$fontsize+4)
           )
           , values = vals, sort = F, hole = 0.8
@@ -509,19 +521,19 @@ get_plotly <- function(dtype, ctype, filters = list(), options = list(), csv.par
     if (ctype == 'pie') {
       
       dimensions <- unique(sd$df[[csv.params$dimension$name]]) 
-      
       vals <- as.vector(sapply(dimensions, FUN = function(dimension) {
         return(length(unique(sd$df[[csv.params$evidence$id]][sd$df[[csv.params$dimension$id]] == dimension])))  
       }))
       
       pre_g <- ifelse(length(filters[['technologyType']]) == 1, paste('Tec.',filters[['technologyType']]), 'Total')
+      sgroup <- paste0(unique(sd$df['Ciclo']), collapse=',')
       
       p <- plot_ly()
       p <- add_pie(
         p
         , labels = dimensions
         , title = list(
-          text = paste0("\n\n",sum(vals),' Evidências\nem ',pre_g,'\n(Ciclo 1)')
+          text = paste0("\n\n",sum(vals),' Evidências\nem ',pre_g,'\n(', sgroup,')')
           , font = list(size=(options$fontsize+4))
         )
         , values = vals
